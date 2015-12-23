@@ -4,4 +4,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+
+
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"><!--경로와 확작자르를 줄일수 있게 해준다.(하지만 여기서는 surfix를 안썻기때문에 확장자는 생략X) -->
+	<property name="viewClass">
+		<value>org.springframework.web.servlet.view.InternalResourceView</value><!-- 현재 보여질 클래스 라이브러리를 jstl로 하겠다는 뜻, InternalResourceView으로 설정가능 기본기능임 이건 -->
+	</property>
+	
+	<property name="prefix">
+		<value>/WEB-INF/views/</value> <!--경로 생략 가능하게 해줌(근데 여기 경로를 설정하면 모든 경로를 생략해야한다.)-->
+	</property>
+	
+
+</bean>
+
 </beans>

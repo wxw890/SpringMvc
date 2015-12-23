@@ -17,5 +17,16 @@
 	<property name="boardService" ref="boardService"></property><!--WriteController에 setBoardService함수에 boardService(=dao)을 주입한다.  -->
 </bean>
 
+<bean class="com.netsong7.board.controller.ReadController">
+	<property name="boardService" ref="boardService"></property>
+</bean>
+
+<bean class="com.netsong7.board.controller.UpdateController">
+	<property name="boardService" ref="boardService"></property>
+</bean>
+
+<bean class="com.netsong7.board.controller.DeleteController">
+	<property name="boardService" ref="boardService"></property>
+</bean>
 
 </beans>

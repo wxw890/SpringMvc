@@ -19,7 +19,7 @@ public class ListController{
 	}
 	@RequestMapping("/list.board")
 	public ModelAndView pageHandler(){
-		ModelAndView mav = new ModelAndView("/WEB-INF/views/board/list.jsp");
+		ModelAndView mav = new ModelAndView("/board/list.jsp");
 		
 		try {
 		List list = boardService.getList();//getList()함수가 list 결과값을 가지고 온다.

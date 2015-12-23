@@ -59,6 +59,6 @@
 	
 	<servlet-mapping>
 		<servlet-name>chap02</servlet-name>
-		<url-pattern>/</url-pattern><!-- 모든 요청을 컨트롤로 할거면 / 로 사용한다. -->
+		<url-pattern>/</url-pattern><!-- 모든 요청을 컨트롤로 할거면 / 로 사용한다. 모든 요청을 *.spring이라해서 스프링 요청을 구분시켜서 사용할수있다. -->
 	</servlet-mapping>
 </web-app>

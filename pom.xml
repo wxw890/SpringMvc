@@ -53,6 +53,14 @@
 	<artifactId>spring-jdbc</artifactId>
 	<version>4.2.3.RELEASE</version>
 	</dependency>
+	
+	
+	<dependency><!-- Mybatis(실제 개발할때 사용되는 DB 프레임워크) 다운로드 -->
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis</artifactId>
+	<version>3.3.0</version>
+	</dependency>
+	
     
     
     
