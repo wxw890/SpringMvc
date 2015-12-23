@@ -20,7 +20,7 @@ public class WriteController {
 	//페이지 이동
 	@RequestMapping(value="/write.board",  method=RequestMethod.GET)//GET방싱 이동, 예 href로 통해 이동
 	public String pageHandler(){
-		return "/board/write.jsp"; 
+		return "/board/write"; 
 	}
 	//구지 페이지 이동만하기때문에 modelanview를 쓸필요하는 없다. 데이터를 가지고 넘어가는 것이 아니기때문에...
 	@RequestMapping(value="/write.board", method=RequestMethod.POST)//POST방식 이동, 예from로 통해 이동

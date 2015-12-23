@@ -19,7 +19,7 @@ public class ReadController {
 
 	@RequestMapping("/read.board")
 	public ModelAndView PageMove(int b_seq) throws SQLException{//int b_seq는 @requestParameter를 이용한것
-		ModelAndView mav = new ModelAndView("/board/read.jsp");
+		ModelAndView mav = new ModelAndView("/board/read");
 		BoardDto dto = boardService.findBySeq(b_seq);
 		mav.addObject("dto",dto);
 		return mav;

@@ -23,7 +23,7 @@ public class UpdateController {
 	//페이지 이동
 		@RequestMapping(value="/update.board",  method=RequestMethod.GET)//GET방싱 이동, 예 href로 통해 이동
 		public ModelAndView pageHandler(@RequestParam int b_seq) throws SQLException{
-			ModelAndView mav = new ModelAndView("/board/update.jsp");
+			ModelAndView mav = new ModelAndView("/board/update");
 			BoardDto dto = boardService.findBySeq(b_seq);
 			mav.addObject("dto", dto);
 			return mav; 

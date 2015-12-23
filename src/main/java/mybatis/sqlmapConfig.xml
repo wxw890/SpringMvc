@@ -8,6 +8,7 @@
   
   <typeAliases><!-- 별명을 지어주는 것 -->
   	<typeAlias type="com.netsong7.board.repository.BoardDto" alias="BoardDto"/>
+  	<typeAlias type="com.netsong7.member.repository.Member" alias="Member"/>
   </typeAliases>
   
   <environments default="development"><!-- 여기서 바꿀때 release를 사용할지 development를 사용할지 선택하면 된다. -->
@@ -26,15 +27,17 @@
     <environment id="release"><!-- 배포 버전 DB -->
       <transactionManager type="JDBC"/><!-- JDBC로 사용하겠다. -->
       <dataSource type="POOLED"><!-- connection pool 방식으로 하겠다는 뜻 -->
-        <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost/spring4fs?characterEncoding=utf-8"/>
+        <property name="driver" value="com.oracle.jdbc.Driver"/>
+        <property name="url" value="jdbc:oracle://localhost/spring4fs?characterEncoding=utf-8"/>
         <property name="username" value="root"/>
         <property name="password" value="1111"/>
       </dataSource>
     </environment>
-    
   </environments>
+  
   <mappers><!-- 실제 DB작업을 위한 설정파일을 연결하는 부분이다. -->
     <mapper resource="mybatis/boardMapper.xml"/><!-- 패키지이름/xml파일 이름 -->
+    <mapper resource="mybatis/memberMapper.xml"/><!-- 패키지이름/xml파일 이름 -->
   </mappers>
+  
 </configuration>

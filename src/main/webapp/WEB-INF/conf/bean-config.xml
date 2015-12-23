@@ -29,4 +29,14 @@
 	<property name="boardService" ref="boardService"></property>
 </bean>
 
+
+<bean id="memberService" class="com.netsong7.member.service.MemberServiceImpl">
+</bean>
+
+<bean class="com.netsong7.member.controller.RegisterController"><!-- 여길 틀려서 고생했다 ㅜㅜㅜㅜㅜ -->
+	<property name="memberService" ref="memberService"></property>
+</bean>
+
+
+<bean class="com.netsong7.member.controller.MainController"></bean>
 </beans>

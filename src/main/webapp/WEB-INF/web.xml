@@ -44,7 +44,7 @@
   
   
   
-  <!-- dispatcher를 여러개로 설정할수 있다 주로 큰프로젝트를 만들때 사용한다. -->
+  <!-- dispatcher를 여러개로 설정파일들을 관리할 수있다. 주로 큰프로젝트를 만들때 사용한다. -->
     <servlet>
 		<servlet-name>chap02</servlet-name><!--기본적으로  dispatcher-servlet.xml 이름으로 설정파일을 만들어야한다. 이건 약속이기때문에 지켜야한다. 그리고 web.xml과 같은 경로에 파일을 만들어야한다. -->
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class><!-- 중앙에서 중심으로 제어역할을 함 -->
@@ -54,6 +54,7 @@
 		/WEB-INF/conf/handler-config.xml <!-- 이렇게 나누면 handler와 bean, view를 각각 서로 따로따로 관리하며 사용할수있다. 관리만 따로 관리가 되는것이므로 돌아갈때는 같이 돌아간다.  -->
 		/WEB-INF/conf/bean-config.xml
 		/WEB-INF/conf/view-config.xml
+		/WEB-INF/conf/mvc-config.xml
 		</param-value><!-- 이제 이경로로 xml파일을 찾으러 간다. 그러므로 경로에 파일을 만들어줘야한다.  -->
 	</init-param>
 	</servlet>
