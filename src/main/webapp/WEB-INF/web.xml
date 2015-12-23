@@ -31,7 +31,9 @@
   
   
   
-  
+  <listener>
+  	<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
   	
   	<listener><!-- 사실 지금 예제에서는 구동이 안된다, 이유는 bean-config.xml을 통해 인스턴스가 생성되고 handler-config.xml이 실행되야하는데 여기 listener태그가 실행되면-->
   			  <!-- bean-config.xml을 통해 인스턴스가 생성되기도 전에 handler-config.xml이 실행되므로 제대로 실행이 안된다. 즉, 원래는 된다. -->

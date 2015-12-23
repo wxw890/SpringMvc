@@ -3,6 +3,7 @@ package com.netsong7.board.controller;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,11 +15,13 @@ import com.netsong7.board.service.BoardService;
 @Controller
 public class ListController{
 	private BoardService boardService;
+	private Logger log = Logger.getLogger(this.getClass());//this.getClass()는 현재클래스의 주소, Log4J꺼로 사용해야한다.
 	public void setBoardService(BoardService boardService) {//여기에 들어간다.
 		this.boardService = boardService;
 	}
 	@RequestMapping("/list.board")
 	public ModelAndView pageHandler(){
+		log.info("연습삼아 해보는 로그");
 		ModelAndView mav = new ModelAndView("/board/list.jsp");
 		
 		try {
