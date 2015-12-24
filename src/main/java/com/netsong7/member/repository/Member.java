@@ -92,5 +92,9 @@ public class Member {
 		this.password = newPassword;
 	}
 	
+	public boolean matchPassword(String password){ //실제 패스워드가 맞는 지 검사
+		return this.password.equals(password);
+	}
+	
 	
 }

@@ -8,4 +8,8 @@
   		insert into MEMBER(email, password,
 		name, registerDate) values(#{email},#{password}, #{name}, #{registerDate})
   	</insert>
+  	
+  	<select id="selectByEmail" parameterType="String" resultType="Member"><!--parameterType(받아오는 값) Member는 alias(별명)를 설정해줬기때문에 경로 지정안해도됨 -->
+  		select * from MEMBER where EMAIL=#{email}
+  	</select>
   </mapper>

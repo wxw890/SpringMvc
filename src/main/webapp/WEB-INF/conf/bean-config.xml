@@ -39,4 +39,17 @@
 
 
 <bean class="com.netsong7.member.controller.MainController"></bean>
+
+<bean class="com.netsong7.member.controller.LoginController">
+	<property name="memberService" ref="memberService"></property>
+</bean>
+
+
+<bean class="com.netsong7.member.controller.LogoutController"></bean>
+
+<bean class="com.netsong7.survey.SurveyController"></bean>
+
+
+
 </beans>
+
